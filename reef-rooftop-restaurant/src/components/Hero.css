@@ -1,0 +1,241 @@
+/* Hero Styles */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a3a4a 0%, #2d5a6b 50%, #1a3a4a 100%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse at 20% 80%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(212, 165, 116, 0.08) 0%, transparent 50%);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 20px;
+  max-width: 900px;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 25px;
+  background: rgba(212, 165, 116, 0.2);
+  border: 1px solid rgba(212, 165, 116, 0.5);
+  border-radius: 30px;
+  color: #d4a574;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  animation: fadeInDown 0.8s ease;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  animation: fadeInUp 0.8s ease 0.2s both;
+}
+
+.hero-title span {
+  color: #d4a574;
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 40px;
+  line-height: 1.8;
+  animation: fadeInUp 0.8s ease 0.4s both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+  animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+.hero-buttons .btn {
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hero-buttons .btn-primary {
+  background: #d4a574;
+  color: #fff;
+  border: none;
+}
+
+.hero-buttons .btn-primary:hover {
+  background: #c4956a;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(212, 165, 116, 0.3);
+}
+
+.hero-buttons .btn-outline {
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.hero-buttons .btn-outline:hover {
+  background: #fff;
+  color: #1a3a4a;
+}
+
+.hero-features {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  animation: fadeInUp 0.8s ease 0.8s both;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+}
+
+.feature-icon {
+  font-size: 1.3rem;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.scroll-indicator {
+  width: 30px;
+  height: 50px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  position: relative;
+}
+
+.scroll-indicator::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #d4a574;
+  border-radius: 50%;
+  animation: scrollBounce 2s infinite;
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-features {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-badge {
+    font-size: 0.8rem;
+    padding: 6px 20px;
+  }
+  
+  .hero-buttons .btn {
+    padding: 14px 35px;
+    font-size: 0.95rem;
+  }
+}
+

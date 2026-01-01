@@ -1,0 +1,170 @@
+/* Menu Styles */
+.menu {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.menu .section-title h2 {
+  color: #1a3a4a;
+}
+
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.menu-tab {
+  padding: 14px 35px;
+  background: transparent;
+  border: 2px solid #e0e0e0;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.menu-tab:hover {
+  border-color: #d4a574;
+  color: #d4a574;
+}
+
+.menu-tab.active {
+  background: #d4a574;
+  border-color: #d4a574;
+  color: #fff;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.menu-item {
+  background: #faf8f5;
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-color: #d4a574;
+}
+
+.menu-item-content {
+  position: relative;
+}
+
+.menu-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.menu-item h3 {
+  font-size: 1.3rem;
+  color: #1a3a4a;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+.menu-item-price {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #d4a574;
+  font-family: 'Playfair Display', serif;
+}
+
+.menu-item p {
+  color: #777;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.menu-footer {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.menu-footer p {
+  color: #888;
+  font-size: 1rem;
+}
+
+.menu-footer a {
+  color: #d4a574;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.menu-footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 992px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding: 80px 0;
+  }
+  
+  .menu-tabs {
+    gap: 10px;
+  }
+  
+  .menu-tab {
+    padding: 12px 25px;
+    font-size: 0.9rem;
+  }
+  
+  .menu-item {
+    padding: 25px;
+  }
+  
+  .menu-item h3 {
+    font-size: 1.2rem;
+  }
+  
+  .menu-item-price {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    padding: 60px 0;
+  }
+  
+  .menu-tab {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+  
+  .menu-item {
+    padding: 20px;
+  }
+  
+  .menu-item-header {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
