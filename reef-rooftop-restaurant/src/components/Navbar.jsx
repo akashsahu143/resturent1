@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
-const Navbar = () => {
+const Navbar = ({ onMenuClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -34,7 +34,7 @@ const Navbar = () => {
           <ul className="nav-links">
             <li><a onClick={() => scrollToSection('home')}>Home</a></li>
             <li><a onClick={() => scrollToSection('about')}>About</a></li>
-            <li><a onClick={() => scrollToSection('menu')}>Menu</a></li>
+            <li><a onClick={onMenuClick}>Menu</a></li>
             <li><a onClick={() => scrollToSection('gallery')}>Gallery</a></li>
             <li><a onClick={() => scrollToSection('reservation')}>Reservation</a></li>
           </ul>
